@@ -20,4 +20,4 @@ This project is licensed under the MIT License. Feel free to use and adapt the c
 
 ## 📬 Contact
 
-Hiericho - [@hiericho](https://github.com/hiericho) - hierichovieytes@gmail.com# about
+Hiericho - [@hiericho](https://github.com/hiericho) - hierichovieytes@gmail.com
