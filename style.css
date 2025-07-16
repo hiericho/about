@@ -1,0 +1,191 @@
+/* style.css */
+:root {
+    --bg-color: #212121;
+    --text-color: #E0E0E0;
+    --primary-color: #A1887F; /* Tono beige/marrón para acentos */
+    --container-bg: #2C2C2C;
+    --border-color: #383838;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* --- Widget del Reloj --- */
+#clock-widget {
+    position: fixed;
+    top: 100px; /* Posición vertical, debajo del header */
+    right: 5%; /* Alineado a la derecha */
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 10px 15px;
+}
+.clock-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.clock-info i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+.clock-info > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.clock-info span:first-child { /* Etiqueta "Santiago, Chile" */
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+#time-display {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Cabecera Principal (Navegación) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(33, 33, 33, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1002;
+    height: 80px;
+}
+.header-gif {
+    width: 60px;
+    height: 60px;
+}
+.header-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.main-nav {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+.main-nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 2rem; }
+.main-nav a { color: var(--text-color); text-decoration: none; font-size: 1rem; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: all 0.3s; }
+.main-nav a:hover, .main-nav a.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+.language-switcher a { color: var(--text-color); text-decoration: none; margin-left: 1rem; font-weight: 500; transition: color 0.3s; }
+.language-switcher a:hover { color: var(--primary-color); }
+.hamburger { display: none; font-size: 2rem; background: none; border: none; color: var(--text-color); cursor: pointer; }
+
+/* --- Sección Hero --- */
+main { padding-top: 80px; }
+.hero { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 0 5%; gap: 2rem; }
+.hero-text { max-width: 600px; }
+.hero-text h1 { font-size: 2rem; font-weight: 400; color: var(--text-color); }
+.hero-text h2 { font-size: 4.5rem; font-weight: 700; color: #fff; margin: -10px 0 10px; }
+.hero-text h3 { font-size: 1.2rem; font-weight: 500; color: var(--primary-color); letter-spacing: 2px; margin-bottom: 1.5rem; }
+.hero-text p { font-size: 1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 500px; }
+.hero-buttons .btn { text-decoration: none; padding: 12px 24px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; margin-right: 1rem; display: inline-block; }
+.btn-primary { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--primary-color); color: var(--bg-color); }
+.btn-secondary { background-color: var(--primary-color); border: 2px solid var(--primary-color); color: var(--bg-color); }
+.btn-secondary:hover { background-color: transparent; color: var(--primary-color); }
+.hero-image img { max-width: 450px; width: 100%; animation: float 6s ease-in-out infinite; }
+@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+
+/* --- Secciones de Contenido (About, Projects, Contact) --- */
+.content-section { max-width: 1100px; margin: 3rem auto; padding: 5rem 5%; text-align: center; }
+.section-title { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem; font-weight: 700; }
+.subsection-title { font-size: 1.5rem; color: var(--text-color); margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 0.5rem; }
+.content-section p { font-size: 1.1rem; line-height: 1.7; max-width: 650px; margin: 0 auto 1rem auto; }
+.interests-list, .contact-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+.interests-list li { font-size: 1.1rem; font-weight: 500; }
+.interests-list i { color: var(--primary-color); margin-right: 0.5rem; }
+
+/* --- Rejilla de Proyectos (NUEVO ESTILO) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Mínimo más pequeño para tarjetas cuadradas */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.project-square {
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Para que sea siempre cuadrado */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+}
+.project-square:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.project-square-main-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.project-square-icon-container { margin-bottom: 10px; }
+.project-square-icon-container i { font-size: 2.5em; color: var(--primary-color); transition: transform 0.2s ease; }
+.project-square:hover .project-square-icon-container i { transform: scale(1.1); }
+.project-square-title { font-size: 1.1em; color: #fff; margin: 0 0 5px 0; font-weight: bold; }
+.project-square-tech { display: block; font-size: 0.75em; color: var(--text-color); opacity: 0.7; margin-bottom: 10px; }
+.project-square-action-text { font-size: 0.85em; color: var(--primary-color); opacity: 0.9; margin-top: auto; }
+.project-square-github-link {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: var(--text-color);
+    font-size: 1.3em;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+.project-square-github-link:hover { opacity: 1; color: var(--primary-color); transform: scale(1.1); }
+
+
+/* --- Lista de Contacto --- */
+.contact-list a { text-decoration: none; color: var(--text-color); font-size: 1.1rem; background-color: var(--container-bg); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.75rem; }
+.contact-list a:hover { transform: translateY(-5px); background-color: var(--primary-color); color: var(--bg-color); }
+.contact-list a:hover i { color: var(--bg-color); }
+.contact-list i { font-size: 1.5rem; color: var(--primary-color); transition: color 0.3s ease; }
+.availability-note { margin-top: 3rem; font-size: 0.9rem; opacity: 0.7; }
+
+/* --- Footer --- */
+footer { text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; }
+
+/* --- Diseño Responsivo (Móvil) --- */
+@media (max-width: 768px) {
+    #clock-widget { display: none; }
+    .header-gif { display: none; }
+    .main-header { justify-content: flex-end; }
+    .main-nav { display: none; flex-direction: column; position: fixed; top: 75px; left: 0; width: 100%; background-color: var(--container-bg); }
+    .main-nav.active { display: flex; }
+    .main-nav ul { flex-direction: column; width: 100%; text-align: center; }
+    .main-nav li { padding: 1rem 0; }
+    .hamburger { display: block; }
+    .hero { flex-direction: column-reverse; text-align: center; padding-top: 5rem; }
+    .hero-text h2 { font-size: 3rem; }
+}

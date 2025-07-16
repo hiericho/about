@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Idioma por defecto: Inglés-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiericho - Electronics Technician & Developer</title>
+
+    <!-- Ícono de la página (Favicon) -->
+    <link rel="icon" href="static/toro.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Widget del Reloj (Esquina Superior Derecha) -->
+    <div id="clock-widget">
+        <div class="clock-info">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+                <span class="lang" data-key="local_time_label">Santiago, Chile</span>
+                <span id="time-display">--:--:--</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <!-- GIF en lugar del logo -->
+        <div class="header-gif">
+            <img src="static/teatoro.gif" alt="Header GIF">
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" class="lang" data-key="nav_home">Home</a></li>
+                <li><a href="#about" class="lang" data-key="nav_about">About me</a></li>
+                <li><a href="#projects" class="lang" data-key="nav_projects">Projects</a></li>
+                <li><a href="#contact" class="lang" data-key="nav_contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="#" onclick="changeLanguage('en')">EN</a>
+            <a href="#" onclick="changeLanguage('es')">ES</a>
+            <a href="#" onclick="changeLanguage('de')">DE</a>
+        </div>
+        <button class="hamburger">☰</button>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1 class="lang" data-key="hero_greeting">Hello! I'm</h1>
+                <h2>Hiericho</h2>
+                <h3 class="lang" data-key="hero_role">ELECTRONICS TECHNICIAN & DEVELOPER</h3>
+                <p class="lang" data-key="hero_desc">
+                   Passionate about programming, coding, and technology. I enjoy web development, machine learning, and open-source projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary lang" data-key="btn_projects">MY PROJECTS</a>
+                    <a href="#contact" class="btn btn-secondary lang" data-key="btn_contact">CONTACT</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="static/me.png" alt="Illustration of Hiericho">
+            </div>
+        </section>
+
+        <!-- SECCIÓN ABOUT -->
+        <section id="about" class="content-section">
+            <h2 class="section-title lang" data-key="about_title">About Me</h2>
+            <div class="about-content">
+                <p class="lang" data-key="about_p1">
+                    Hello! I'm Hiericho (pronounced like Jericho). I'm a 21-year-old undergrad electronics technician passionate about programming, coding, and technology.
+                </p>
+                <p class="lang" data-key="about_p2">
+                    I work at FAMAE and have experience with Python, JavaScript, and C++.
+                </p>
+            </div>
+            <h3 class="subsection-title lang" data-key="interests_title">Interests / Hobbies</h3>
+            <ul class="interests-list">
+                <li><i class="fa-solid fa-code"></i><span class="lang" data-key="hobby_1">Programming!</span></li>
+                <li><i class="fa-solid fa-language"></i><span class="lang" data-key="hobby_2">Learning languages!</span></li>
+                <li><i class="fa-solid fa-book-open"></i><span class="lang" data-key="hobby_3">Reading!</span></li>
+                <li><i class="fa-solid fa-paint-brush"></i><span class="lang" data-key="hobby_4">Drawing!</span></li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN PROJECTS -->
+        <section id="projects" class="content-section">
+            <h2 class="section-title lang" data-key="projects_title">My Projects</h2>
+            <div class="project-grid">
+                <!-- Project: Balatro Helper -->
+                <div class="project-square">
+                    <a href="https://hiericho.github.io/balatrohelper/" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="Open Balatro Helper">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="project-square-title">Balatro Helper</h3>
+                        <span class="project-square-tech">JavaScript, HTML, CSS</span>
+                        <span class="project-square-action-text lang" data-key="project_open_app">Open App</span>
+                    </a>
+                    <a href="https://github.com/hiericho/balatrohelper" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Torobot -->
+                <div class="project-square">
+                    <a href="https://github.com/hiericho/torobot" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="View Torobot on GitHub">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="project-square-title">Torobot</h3>
+                        <span class="project-square-tech">Python, Machine Learning</span>
+                        <span class="project-square-action-text lang" data-key="project_view_source">View on GitHub</span>
+                    </a>
+                    <a href="https://github.com/hiericho/torobot" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Spotime -->
+                <div class="project-square">
+                    <a href="https://github.com/hiericho/spotime" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="View Spotime on GitHub">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3 class="project-square-title">Spotime</h3>
+                        <span class="project-square-tech">Python, Spotify API</span>
+                        <span class="project-square-action-text lang" data-key="project_view_source">View on GitHub</span>
+                    </a>
+                    <a href="https://github.com/hiericho/spotime" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Transcriber -->
+                <div class="project-square">
+                    <a href="https://hiericho.github.io/transcriber/" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="Open Transcriber">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <h3 class="project-square-title">Transcriber</h3>
+                        <span class="project-square-tech">JavaScript, HTML, CSS</span>
+                        <span class="project-square-action-text lang" data-key="project_open_app">Open App</span>
+                    </a>
+                    <a href="https://github.com/hiericho/transcriber" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Keyboard Tester -->
+                <div class="project-square">
+                    <a href="https://github.com/hiericho/keyboardtesterpy" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="View Keyboard Tester on GitHub">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-keyboard"></i>
+                        </div>
+                        <h3 class="project-square-title">Keyboard Tester</h3>
+                        <span class="project-square-tech">Python, Tkinter</span>
+                        <span class="project-square-action-text lang" data-key="project_view_source">View on GitHub</span>
+                    </a>
+                    <a href="https://github.com/hiericho/keyboardtesterpy" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Project: Simple To-Do List -->
+                <div class="project-square">
+                    <a href="https://hiericho.github.io/lists/" class="project-square-main-link" target="_blank" rel="noopener noreferrer" title="Open Simple To-Do List">
+                        <div class="project-square-icon-container">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h3 class="project-square-title">Simple To-Do List</h3>
+                        <span class="project-square-tech">JavaScript, HTML, CSS</span>
+                        <span class="project-square-action-text lang" data-key="project_open_app">Open App</span>
+                    </a>
+                    <a href="https://github.com/hiericho/lists" class="project-square-github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACT -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title lang" data-key="contact_title">Get in Touch</h2>
+            <p class="lang" data-key="contact_intro">You can find me online or reach out through the following channels:</p>
+            <ul class="contact-list">
+                 <li><a href="mailto:hierichovieytes@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-fw"></i><span class="lang" data-key="contact_email">Email Me!</span></a></li>
+                <li><a href="#" onclick="copyToClipboard('@hiericho')"><i class="fa-brands fa-discord fa-fw"></i><span class="lang" data-key="contact_discord">Discord: @hiericho</span></a></li>
+                <li><a href="https://github.com/hiericho" target="_blank"><i class="fa-brands fa-github fa-fw"></i><span class="lang" data-key="contact_github">GitHub Profile</span></a></li>
+                <li><a href="https://instagram.com/hieraltair" target="_blank"><i class="fa-brands fa-instagram fa-fw"></i><span>Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/hiericho" target="_blank"><i class="fa-brands fa-linkedin fa-fw"></i><span>LinkedIn</span></a></li>
+            </ul>
+            <p class="availability-note lang" data-key="contact_availability">
+                I'm usually most active in the mornings and afternoons. Feel free to reach out, and I'll get back to you as soon as I can!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hiericho Vieytes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
